@@ -2,7 +2,6 @@ name: Spike
 description: An item to research and answer questions.
 type: "Spike"
 projects: ["MinecraftPlanetEarth/1"]
-labels: ["needs review"]
 body:
   - type: textarea
     id: problem
