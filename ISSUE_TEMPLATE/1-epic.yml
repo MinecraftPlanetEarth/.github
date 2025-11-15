@@ -1,0 +1,38 @@
+name: Epic
+description: An item to track new feature for this project.
+type: "Epic"
+projects: ["MinecraftPlanetEarth/1"]
+labels: ["needs review"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the epic.
+    validations:
+      required: true
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      description: The list of target dates for the epic.
+      render: markdown
+      value: |
+        | Target                | Start      | End        |
+        | --------------------- | ---------- | ---------- |
+        | Development & Testing | __/__/____ | __/__/____ |
+        | System Testing        | __/__/____ | __/__/____ |
+        | Beta Testing          | __/__/____ | __/__/____ |
+        | Pre-Release           | __/__/____ | __/__/____ |
+        | Release               | __/__/____ | __/__/____ |
+    validations:
+      required: true
+  - type: checkboxes
+    id: definition-of-done
+    attributes:
+      label: Definition of Done
+      description: (No need to check these boxes)
+      options:
+        - label: Development & Testing Done
+        - label: System Testing Done
+        - label: Release Done
